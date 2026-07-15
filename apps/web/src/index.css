@@ -1,0 +1,101 @@
+/**
+ * AIScribe — Global Styles
+ *
+ * Design tokens and base reset for the clinician review UI.
+ * No external CSS framework is used — all styling is vanilla CSS + inline styles.
+ * Components consume --color-* and --radius custom properties directly.
+ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design tokens ── */
+:root {
+  /* Brand */
+  --color-primary:       #1a56db;
+  --color-primary-dark:  #1e429f;
+  --color-primary-light: #e8f0fe;
+
+  /* Semantic */
+  --color-success:       #057a55;
+  --color-success-light: #def7ec;
+  --color-success-border:#bcf0da;
+  --color-error:         #c81e1e;
+  --color-error-light:   #fde8e8;
+  --color-error-border:  #f8b4b4;
+  --color-warning:       #92400e;
+  --color-warning-light: #fef3c7;
+  --color-warning-border:#fcd34d;
+
+  /* Neutral */
+  --color-text:          #111827;
+  --color-text-secondary:#374151;
+  --color-text-muted:    #6b7280;
+  --color-text-faint:    #9ca3af;
+  --color-border:        #d1d5db;
+  --color-border-light:  #e5e7eb;
+  --color-bg:            #f9fafb;
+  --color-bg-subtle:     #f3f4f6;
+  --color-white:         #ffffff;
+
+  /* Shape */
+  --radius-sm:   4px;
+  --radius:      8px;
+  --radius-lg:   12px;
+
+  /* Shadow */
+  --shadow-sm:   0 1px 2px rgba(0,0,0,0.06);
+  --shadow:      0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg:   0 4px 6px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* ── Base ── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* ── Elements ── */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Spinner keyframe (used by StatusMessage) ── */
+@keyframes aiscribe-spin {
+  to { transform: rotate(360deg); }
+}

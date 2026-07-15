@@ -1,0 +1,45 @@
+##############################################################################
+# AIScribe — Local Development Docker Compose
+#
+# Services managed here:
+#   - postgres: PostgreSQL 15 (hosts both aiscribe_app and simulated_emr)
+#
+# Services NOT managed here (run locally):
+#   - Mirth Connect: already installed locally on the host machine
+#   - Express API:   run via `npm run api`
+#   - React web:     run via `npm run web`
+#
+# First-time startup:
+#   docker-compose up -d
+#   npm run seed:clinical
+#
+# Full reset (destroys all data and re-seeds on next up):
+#   docker-compose down -v
+##############################################################################
+
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aiscribe_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devpassword
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Init scripts run in alphabetical order on first container boot
+      - ./database/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local

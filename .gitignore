@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# IDE & OS
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary / upload files
+.temp/
+temp/
+tmp/
+upload_dir/
+uploads/
+
+# Audio files (demo recordings, test uploads — never commit audio to git)
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
+*.aac
+
+# Docker
+.dockerignore
+
+# Testing
+coverage/
+.nyc_output/
+
+
