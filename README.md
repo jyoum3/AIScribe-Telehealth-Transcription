@@ -4,6 +4,14 @@ AI-powered clinical documentation assistant for psychiatric telehealth. Clinicia
 
 ---
 
+## Live Demo
+
+<video src="docs/AISCRIBE-LIVE-DEMO.mp4" width="100%" controls></video>
+
+*Watch the 5-minute walkthrough showcasing real-time Whisper transcription, Claude SOAP generation, Mirth Connect HL7 v2 compilation, and PostgreSQL simulated EMR database writes.*
+
+---
+
 ## Features
 
 | Feature | Details |
