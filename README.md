@@ -6,7 +6,7 @@ AI-powered clinical documentation assistant for psychiatric telehealth. Clinicia
 
 ## Live Demo
 
-https://github.com/user-attachments/assets/d93a2613-deda-4d68-97a6-20a5c518d69b
+https://github.com/user-attachments/assets/492bbd5f-9234-4ce0-97c9-2fe65e6d76a1
 
 <video src="docs/AISCRIBE-LIVE-DEMO.mp4" width="100%" controls></video>
 
