@@ -79,7 +79,8 @@ export async function transcribeAudio(audioFile, encounter) {
   if (encounter?.mrn) form.append('mrn', encounter.mrn);
 
   const res = await apiClient.post('/transcribe', form, {
-    headers: { 'Content-Type': 'multipart/form-data' }
+    headers: { 'Content-Type': 'multipart/form-data' },
+    timeout: 120000  // 2 min — Whisper (~25s) + Claude (~35s) + Mirth + buffer; overrides the 35s global default
   });
   return res.data;
 }
