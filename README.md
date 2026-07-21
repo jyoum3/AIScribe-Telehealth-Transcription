@@ -18,16 +18,16 @@ https://github.com/user-attachments/assets/d93a2613-deda-4d68-97a6-20a5c518d69b
 
 | Feature | Details |
 |---|---|
-| 🎙️ Audio Transcription | OpenAI Whisper (`whisper-1`) — in-memory processing, never written to disk |
-| 🤖 SOAP Note Generation | Anthropic Claude (`claude-sonnet-4-6`) — structured JSON output with validation |
-| 🏥 HL7 v2 Integration | Mirth Connect HTTP Listener → MDM^T02/T04 messages → PostgreSQL EMR |
-| 📅 FHIR R4 Schedule Sync | Internal mock FHIR gateway; auto-syncs on login, manual refresh available |
-| 📝 Note Amendments | Full versioned amendment workflow with audit trail and idempotency |
-| 👥 Patient History Sidebar | Longitudinal view of all encounters and signed notes per patient |
-| 🔄 Follow-Up Scheduling | Claude control block signals Mirth to insert a new follow-up encounter |
-| ⚙️ Custom AI Prompts | Per-provider Claude prompt templates, stored and applied at transcription time |
-| 🔒 HIPAA Audit Logging | Every clinical access event written to `audit_logs` (fire-and-forget, non-blocking) |
-| 🔑 JWT Authentication | HS256, 24-hour TTL, enumeration-safe login error handling |
+| Audio Transcription | OpenAI Whisper (`whisper-1`) — in-memory processing, never written to disk |
+| SOAP Note Generation | Anthropic Claude (`claude-sonnet-4-6`) — structured JSON output with validation |
+| HL7 v2 Integration | Mirth Connect HTTP Listener → MDM^T02/T04 messages → PostgreSQL EMR |
+| FHIR R4 Schedule Sync | Internal mock FHIR gateway; auto-syncs on login, manual refresh available |
+| Note Amendments | Full versioned amendment workflow with audit trail and idempotency |
+| Patient History Sidebar | Longitudinal view of all encounters and signed notes per patient |
+| Follow-Up Scheduling | Claude control block signals Mirth to insert a new follow-up encounter |
+| Custom AI Prompts | Per-provider Claude prompt templates, stored and applied at transcription time |
+| HIPAA Audit Logging | Every clinical access event written to `audit_logs` (fire-and-forget, non-blocking) |
+| JWT Authentication | HS256, 24-hour TTL, enumeration-safe login error handling |
 
 ---
 
